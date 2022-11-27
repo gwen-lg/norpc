@@ -16,7 +16,7 @@ trait HelloWorld {
    fn hello(s: String) -> String;
 }
 struct HelloWorldApp;
-#[async_trait::async_trait]
+#[norpc::async_trait]
 impl HelloWorld for HelloWorldApp {
    async fn hello(&self, s: String) -> String {
        format!("Hello, {}", s)
